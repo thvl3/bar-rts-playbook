@@ -1,6 +1,5 @@
 # Production inventory for BAR Replay Server
-# Update ansible_host to the actual server IP/hostname when deploying
-main ansible_host=bar-rts.com
+main ansible_host=51.195.223.10
 
 [prod]
 main
