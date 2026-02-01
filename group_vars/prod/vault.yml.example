@@ -1,0 +1,9 @@
+# Example vault file for BAR Replay Server production secrets
+# Copy this to vault.yml and encrypt with: ansible-vault encrypt group_vars/prod/vault.yml
+---
+vault_postgres_password: "your-secure-postgres-password"
+vault_bar_db_github_token: "your-github-personal-access-token"
+vault_bar_db_lobby_username: "bardb-bot-username"
+vault_bar_db_lobby_password: "bardb-bot-password"
+vault_bar_db_google_sheets_id: "your-google-sheets-id"
+vault_bar_db_google_sheets_api_key: "your-google-sheets-api-key"

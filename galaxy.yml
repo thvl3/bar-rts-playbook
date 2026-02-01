@@ -1,10 +1,8 @@
 namespace: beyondallreason
-name: monitoring
-description: Minimal BAR monitoring galaxy collection to allow importing client role easily
-version: 0.0.1
+name: replay
+description: Ansible playbook for BAR Replay Server (bar-rts.com)
+version: 0.1.0
 readme: README.md
 authors:
   - BAR Team
-dependencies:
-  "victoriametrics.cluster": "==2.36.0"
-  "prometheus.prometheus": "==0.27.4"
+dependencies: {}

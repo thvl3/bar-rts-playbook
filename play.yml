@@ -1,6 +1,6 @@
 ---
-- name: Set up host
+- name: Set up BAR Replay Server
   hosts: all
   roles:
-    - role: monitoring
+    - role: replay
       become: true

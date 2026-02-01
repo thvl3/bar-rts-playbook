@@ -1,14 +1,24 @@
 ---
-domain_name_dex: "infraid.beyondallreason.dev"
-domain_name_grafana: "grafana.beyondallreason.dev"
-domain_name_victoriametrics: "metrics.beyondallreason.dev"
-metrics_write_password: "{{ vault_metrics_write_password }}"
-dex_github: true
-github_org: "beyond-all-reason"
-github_client_id: "{{ vault_github_client_id }}"
-github_client_secret: "{{ vault_github_client_secret }}"
-victoriametrics_web_allowed_admin: "allowed_groups=beyond-all-reason:monitoring-admins"
-victoriametrics_web_allowed_editor: "allowed_groups=beyond-all-reason:monitoring-admins,beyond-all-reason:monitoring-editors"
-grafana_role_attribute_path: "contains(groups[*], 'beyond-all-reason:monitoring-admins') && 'Admin' || contains(groups[*], 'beyond-all-reason:monitoring-editors') && 'Editor' || contains(groups[*], 'beyond-all-reason:monitoring-viewers') && 'Viewer' || 'None'"
-monitoring_write_instance_dev: false # for the client role
-monitoring_metrics_write_password: "{{ vault_metrics_write_password_raw }}"
+# BAR Replay Server - Production Variables
+
+# Production domain
+domain_name_replay: "bar-rts.com"
+# Optional: API subdomain for direct backend access
+# domain_name_api: "api.bar-rts.com"
+
+# Secrets from vault
+postgres_password: "{{ vault_postgres_password }}"
+bar_db_github_token: "{{ vault_bar_db_github_token }}"
+bar_db_lobby_username: "{{ vault_bar_db_lobby_username }}"
+bar_db_lobby_password: "{{ vault_bar_db_lobby_password }}"
+bar_db_google_sheets_id: "{{ vault_bar_db_google_sheets_id }}"
+bar_db_google_sheets_api_key: "{{ vault_bar_db_google_sheets_api_key }}"
+
+# Production settings
+bar_db_process_balance_changes: true
+bar_db_verbose: false
+bar_db_log_sql: false
+
+# Don't rebuild images automatically in prod
+bar_db_rebuild: false
+bar_live_services_rebuild: false
